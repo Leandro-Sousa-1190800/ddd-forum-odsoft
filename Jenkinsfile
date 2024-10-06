@@ -4,10 +4,6 @@ pipeline {
         GIT_REPO_URL    = 'https://github.com/Leandro-Sousa-1190800/ddd-forum-odsoft'
         GIT_REPO_BRANCH = 'master'
     }
-    tools {
-            git 'Default'
-            nodejs 'NodeJS 12.22.12'
-        }
     triggers {
         pollSCM('H/5 * * * *')
         }
