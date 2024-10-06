@@ -5,7 +5,7 @@ pipeline {
         GIT_REPO_BRANCH = 'master'
     }
     tools {
-            nodejs '22.9.0'
+            nodejs 'NodeJS 22.9.0'
         }
     triggers {
         pollSCM('H/5 * * * *')
