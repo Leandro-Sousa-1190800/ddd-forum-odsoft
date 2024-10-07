@@ -36,7 +36,7 @@ pipeline {
         stage('Clean'){
             steps{
                 echo 'Cleaning it up...'
-                mvn clean
+                xCommand('mvn clean')
             }
         }
         stage('Build') {
