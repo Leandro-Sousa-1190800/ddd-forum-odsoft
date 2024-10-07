@@ -33,6 +33,12 @@ pipeline {
                 xCommand('npm run-script build')
             }
         }
+        stage('Clean'){
+            steps{
+                echo 'Cleaning it up...'
+                maven clean
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
