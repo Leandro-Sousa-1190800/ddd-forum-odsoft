@@ -36,7 +36,7 @@ pipeline {
         stage('Clean'){
             steps{
                 echo 'Cleaning it up...'
-                maven clean
+                mvn clean
             }
         }
         stage('Build') {
