@@ -1,3 +1,12 @@
+// Run cross OS commands
+def xCommand(command) {
+    if(isUnix()){
+        sh command
+    }else{
+        bat command
+    }
+}
+
 pipeline {
     agent any
     environment {
@@ -20,8 +29,8 @@ pipeline {
         stage('Install dependencies'){
             steps{
                 echo 'Installing dependencies...'
-                sh 'npm install'
-                sh 'npm run-script build'
+                xCommand('npm install')
+                xCommand('npm run-script build')
             }
         }
         stage('Build') {
